@@ -10,6 +10,13 @@ function getUrlVars()
     }
     return vars;
 }
+/*
+Credit where credit is due!
+Found at: 
+http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+and he got it from:
+Roshumbo @ http://snipplr.com/users/Roshambo/
+*/
 
 $(document).ready( function(){
 	var inputID = '#ContentPlaceHolder1_BasketItems1_txtVoucher';
