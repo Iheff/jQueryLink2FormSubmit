@@ -29,7 +29,7 @@ $(document).ready( function(){
 							$('#ContentPlaceHolder1_BasketItems1_txtVoucher').val(voucherCode);
 							$('.hidecontents.hidevoucher').slideDown(500).children('.vouchero').css('border','1px solid green');
 							$('#form1').attr('action','http://www.wiggle.co.uk/BasketDisplay.aspx');
-							 __doPostBack('ContentPlaceHolder1_BasketItems1_btnAddVoucher', '');
+							 __doPostBack();
 							//$('#form1').submit();	 
 						}
 
