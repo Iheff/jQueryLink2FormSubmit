@@ -20,14 +20,17 @@ Roshumbo @ http://snipplr.com/users/Roshambo/
 
 $(document).ready( function(){
 	var inputID = '#ContentPlaceHolder1_BasketItems1_txtVoucher';
-	 if(window.location.contains("voucher=")) // This doesn't work, any suggestions.
+	 if(document.URL.indexOf("?voucher=") >= 0) // This doesn't work, any suggestions.
                 		{
-							//alert("This is a voucher Url");
+							alert("This is a voucher Url");
+							alert(getUrlVars()['voucher']);
 							var voucherCode = getUrlVars()["voucher"];
 							
-							$('form:first input #'+ inputID ).attr('val',voucherCode);
-							
-							$('form:first').submit();	 
+							$('#ContentPlaceHolder1_BasketItems1_txtVoucher').val(voucherCode);
+							$('.hidecontents.hidevoucher').slideDown(500).children('.vouchero').css('border','1px solid green');
+							$('#form1').attr('action','http://www.wiggle.co.uk/BasketDisplay.aspx');
+							 __doPostBack('ContentPlaceHolder1_BasketItems1_btnAddVoucher', '');
+							//$('#form1').submit();	 
 						}
 
 	
